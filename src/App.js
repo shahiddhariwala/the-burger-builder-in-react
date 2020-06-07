@@ -1,10 +1,14 @@
-import React from 'react';
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+import React,{Component} from 'react';
+import Layout from './components/Layout/Layout';
+class App extends Component
+{
+  render()
+  {
+    return (
+      <div>
+        <Layout>Hi I am Shahid Dhariwala </Layout>
+      </div>
+    );
+  }
 }
-
 export default App;
