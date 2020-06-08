@@ -10,6 +10,7 @@ const controls = [
 ];
 const buildControls = (props) =>(
     <div className={classes.BuildControls}>
+        <p>Current Price : <strong>{props.price}</strong></p>
         {controls.map(control => (<BuildControl key={control.label} label={control.label} 
         added={()=>props.addIngredeint(control.type)}
         removed={()=>props.removeIngredeint(control.type)}
