@@ -1,22 +1,35 @@
-import React from 'react';
-import classes from './buildControls.module.css';
-import BuildControl from './BuildControl/BuildControl';
+import React from "react";
+import classes from "./buildControls.module.css";
+import BuildControl from "./BuildControl/BuildControl";
 
 const controls = [
-    {label: 'Salad',type:'salad'},
-    {label: 'Cheese',type:'cheese'},
-    {label: 'Bacon',type:'bacon'},
-    {label: 'Meat',type:'meat'},
+  { label: "Salad", type: "salad" },
+  { label: "Cheese", type: "cheese" },
+  { label: "Bacon", type: "bacon" },
+  { label: "Meat", type: "meat" },
 ];
-const buildControls = (props) =>(
-    <div className={classes.BuildControls}>
-        <p>Current Price : <strong>{props.price}</strong></p>
-        {controls.map(control => (<BuildControl key={control.label} label={control.label} 
-        added={()=>props.addIngredeint(control.type)}
-        removed={()=>props.removeIngredeint(control.type)}
-        disabled={props.disabled[control.type]}/>))}
-        <button  className={classes.OrderButton} disabled={!props.purchasable}>ORDER NOW</button>
-    </div>
+const buildControls = (props) => (
+  <div className={classes.BuildControls}>
+    <p>
+      Current Price : <strong>{props.price}</strong>
+    </p>
+    {controls.map((control) => (
+      <BuildControl
+        key={control.label}
+        label={control.label}
+        added={() => props.addIngredeint(control.type)}
+        removed={() => props.removeIngredeint(control.type)}
+        disabled={props.disabled[control.type]}
+      />
+    ))}
+    <button
+      className={classes.OrderButton}
+      disabled={!props.purchasable}
+      onClick={props.ordered}
+    >
+      ORDER NOW
+    </button>
+  </div>
 );
 
 export default buildControls;
