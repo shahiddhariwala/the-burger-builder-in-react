@@ -9,10 +9,20 @@ class Checkpoint extends Component {
       meat: 1,
     },
   };
+
+  checkoutCancelledHandler = ()=>
+  {
+    this.props.history.goBack();
+  }
+
+  checkoutContinuedHandler = () =>
+    {
+        this.props.history.replace('/checkout/checkout-data');
+    }
   render() {
     return (
       <div>
-        <CheckoutSummary ingredeints={this.state.ingredeints} />
+        <CheckoutSummary ingredeints={this.state.ingredeints} checkoutCancelled={this.checkoutCancelledHandler} checkoutContinued={this.checkoutContinuedHandler}/>
       </div>
     );
   }
