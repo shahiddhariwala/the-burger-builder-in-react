@@ -10,6 +10,18 @@ class Checkpoint extends Component {
     },
   };
 
+  componentDidMount()
+  {
+    console.log(this.props);
+    let ingredeint={};
+    const query = new URLSearchParams(this.props.location.search);
+    for (let param of query.entries()) {
+        ingredeint[param[0]] = +param[1];
+    }
+    
+      
+      this.setState({ingredeints:ingredeint});
+  }
   checkoutCancelledHandler = ()=>
   {
     this.props.history.goBack();
