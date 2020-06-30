@@ -1,3 +1,12 @@
+# Burger App
+![BurgerApp](https://github.com/shahiddhariwala/the-burger-builder-in-react/blob/master/App%20Front.png)
+# Summary
+The Burger Builder Application is a single page React application that allows you order your own personalized burger. The application is built with a complex set of HTML5, CSS3 and REACT code.
+## Technologies Used:
+1. HTML5 & CSS3 The layout as well as the burger elements were built with CSS3. Feel free to inspect the code to see how they were created. 
+2. React + Redux + Router React was used heavily throughout this project with multiple components. This project makes use of Redux to provide for a central store and make state management easier. The application also uses React Router for managing routes locally. 
+3. Firebase The application was deployed on firebase for a simple database solution to hold the orders and login information. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
